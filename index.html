@@ -1,11 +1,210 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head> 
-     <meta charset="UTF-8"> 
-     <title>Mi primera web</title> 
-</head> 
-<body> 
-     <h1>¡Hola mundo! 🌍</h1> 
-     <p>Esta es mi primera página creada con GitHub Pages.</p> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBites Delight - Healthy Yum Yums</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <custom-header></custom-header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="hero" class="hero-section mb-16">
+            <div class="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-8 md:p-12 text-white">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Comer sano nunca fue tan delicioso <span class="inline-block">🍓</span></h2>
+                <p class="text-xl mb-6">Recetas simples, nutritivas y llenas de sabor.</p>
+                <a href="#recetas" class="inline-block bg-white text-teal-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300">Ver recetas</a>
+            </div>
+        </section>
+
+        <section id="recetas" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Mis recetas favoritas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Receta 1 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer" onclick="showRecipeDetails(1)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bowl de Quinoa y Aguacate</h3>
+                        <p class="text-gray-600 mb-4">Bowl proteico con quinoa, aguacate y vegetales frescos.</p>
+                        <div class="grid grid-cols-3 gap-2 text-sm">
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">420 kcal</div>
+                                <div class="text-xs">Calorías</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">18g</div>
+                                <div class="text-xs">Proteínas</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">45g</div>
+                                <div class="text-xs">Carbos</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receta 2 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer" onclick="showRecipeDetails(2)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Wrap de Atún Integral</h3>
+                        <p class="text-gray-600 mb-4">Wrap saludable con atún, vegetales y hummus.</p>
+                        <div class="grid grid-cols-3 gap-2 text-sm">
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">320 kcal</div>
+                                <div class="text-xs">Calorías</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">25g</div>
+                                <div class="text-xs">Proteínas</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">30g</div>
+                                <div class="text-xs">Carbos</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receta 3 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer" onclick="showRecipeDetails(3)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Crema de Calabaza Proteica</h3>
+                        <p class="text-gray-600 mb-4">Crema espesa con proteína vegetal y semillas.</p>
+                        <div class="grid grid-cols-3 gap-2 text-sm">
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">280 kcal</div>
+                                <div class="text-xs">Calorías</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">15g</div>
+                                <div class="text-xs">Proteínas</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">25g</div>
+                                <div class="text-xs">Carbos</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receta 4 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer" onclick="showRecipeDetails(4)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Ensalada César Fit</h3>
+                        <p class="text-gray-600 mb-4">Versión saludable con pollo y aderezo light.</p>
+                        <div class="grid grid-cols-3 gap-2 text-sm">
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">350 kcal</div>
+                                <div class="text-xs">Calorías</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">30g</div>
+                                <div class="text-xs">Proteínas</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">15g</div>
+                                <div class="text-xs">Carbos</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receta 5 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer" onclick="showRecipeDetails(5)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Omelette de Clara con Espinacas</h3>
+                        <p class="text-gray-600 mb-4">Omelette proteico con vegetales.</p>
+                        <div class="grid grid-cols-3 gap-2 text-sm">
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">220 kcal</div>
+                                <div class="text-xs">Calorías</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">28g</div>
+                                <div class="text-xs">Proteínas</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">5g</div>
+                                <div class="text-xs">Carbos</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receta 6 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer" onclick="showRecipeDetails(6)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Pasta Integral con Brócoli</h3>
+                        <p class="text-gray-600 mb-4">Pasta de trigo integral con vegetales y salsa ligera.</p>
+                        <div class="grid grid-cols-3 gap-2 text-sm">
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">380 kcal</div>
+                                <div class="text-xs">Calorías</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">18g</div>
+                                <div class="text-xs">Proteínas</div>
+                            </div>
+                            <div class="bg-emerald-50 rounded p-2 text-center">
+                                <div class="font-bold">55g</div>
+                                <div class="text-xs">Carbos</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ver más recetas -->
+                <div class="col-span-full text-center mt-8">
+                    <a href="recipes.html" class="inline-block bg-emerald-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-emerald-600 transition duration-300">
+                        Ver más recetas
+                    </a>
+                </div>
+            </div>
+        </section>
+<section id="consejos" class="mb-16 bg-emerald-50 rounded-2xl p-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Consejos healthy <span class="inline-block">🥑</span></h2>
+            <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <i data-feather="droplet" class="text-emerald-500 mr-3 mt-1"></i>
+                    <span>Beber 4L de agua al día.</span>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <i data-feather="egg" class="text-emerald-500 mr-3 mt-1"></i>
+                    <span>Incluir proteína en cada comida.</span>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <i data-feather="x" class="text-emerald-500 mr-3 mt-1"></i>
+                    <span>Evitar alimentos ultraprocesados.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-center">Contáctame</h2>
+            <form class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-md">
+                <div class="mb-4">
+                    <input type="text" placeholder="Tu nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Tu email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Tu mensaje..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 h-32"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-emerald-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-600 transition duration-300">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
